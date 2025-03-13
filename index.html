@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEKNIK OTOMASI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #0d0000;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: #0008ff 3px solid;
+        }
+        header img {
+            width: 80px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 5px 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .gallery figure {
+            text-align: center;
+            width: 45%;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .image-container img {
+            width: 30%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        small {
+            display: block;
+            color: #555;
+        }
+
+        /* Lightbox (Modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            margin: auto;
+            margin-top: 5%;
+            border-radius: 5px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 768px) {
+            .gallery figure {
+                width: 100%;
+            }
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-container img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="FOTO TO/Screenshot 2025-03-12 204855.png" alt="Logo">
+        <div>
+            <h1>TEKNIK OTOMASI</h1>
+            <h1>2023</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="gallery">
+            <h4>ANAK DIDIK KAJUR </h4>
+            <figure>
+                <div class="image-container">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240416-WA0020.jpg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240416-WA0025.jpg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240416-WA0026.jpg" alt="Pelatihan" onclick="openModal(this)">
+                </div>
+                <figcaption>ALGORITMA C++</figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240612-WA0038.jpg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240614-WA0043.jpg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240614-WA0074.jpg" alt="Pelatihan" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTEK RANGKAIAN LOGIKA</figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\BAHASA INDONESIA\IMG-20240710-WA0014.jpg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\BAHASA INDONESIA\IMG-20240710-WA0017.jpg" alt="Pelatihan" onclick="openModal(this)">
+                </div>
+                <figcaption>MATA KULIAH BAHASA INDONESIA</figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\1.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\2.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\3.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\4.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\5.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\6.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\7.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\8.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\9.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\10.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\11.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\12.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\13.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\14.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\15.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\16.jpg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\17.jpg" alt="Manggangan" onclick="openModal(this)">
+
+                </div>
+                <figcaption>FINISH PRAKTEK INSTALASI LISTRIK </figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.17.52.jpeg" alt="Pelatihan" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTEK INSTALASI LISTRIK</figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.20.14.jpeg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.20.14 (2).jpeg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.20.14 (1).jpeg" alt="Pelatihan" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTEK MESIN LISTRIK</figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.35.jpeg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.34 (1).jpeg" alt="Pelatihan" onclick="openModal(this)">
+                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.34.jpeg" alt="Pelatihan" onclick="openModal(this)">
+                </div>
+                <figcaption>PELATIHAN HYDROGEN EDUKIT<small>4-6 FEBRUARI 2025</small></figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.26 (1).jpeg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.30.jpeg" alt="Manggangan" onclick="openModal(this)">
+                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.31.jpeg" alt="Manggangan" onclick="openModal(this)">
+                </div>
+                <figcaption>HEALING WI <small>11 MARET 2025</small></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Lightbox (Modal) -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <script>
+        function openModal(img) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("imgModal").src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
