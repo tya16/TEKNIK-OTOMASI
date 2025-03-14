@@ -1,214 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEKNIK OTOMASI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #0d0000;
-            color: #ffffff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            border-bottom: #0008ff 3px solid;
-        }
-        header img {
-            width: 80px;
-            margin-right: 20px;
-        }
-        header h1 {
-            margin: 5px 0;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .gallery figure {
-            text-align: center;
-            width: 45%;
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .image-container img {
-            width: 30%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .image-container img:hover {
-            transform: scale(1.05);
-        }
-        figcaption {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        small {
-            display: block;
-            color: #555;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TEKNIK OTOMASI</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        <header>
+            <img src="FOTO TO/LOGO.png" alt="Logo">
+            <div>
+                <h1>TEKNIK OTOMASI</h1>
+                <h1>2023</h1>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="gallery">
+                <h4>ANAK DIDIK KAJUR</h4>
+                <figure>
+                    <div class="image-container">
+                        <img src="FOTO TO/HIDROGEN EDUKIT (1).jpeg" alt="none" onclick="openModal(this)">
+                        <img src="FOTO TO/HIDROGEN EDUKIT (2).jpeg" alt="none" onclick="openModal(this)">
+                        <img src="FOTO TO/HIGROGEN EDUKIT.jpeg" alt="none" onclick="openModal(this)">
+                    </div>
+                <figcaption>PELATIHAN HYDROGEN EDUKIT <small>4-6 FEBRUARI 2025</small></figcaption>
+            </figure>
+            
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/UPACARA HARI PENDIDIKAN.jpg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>UPACARA HARI PENDIDIKAN <small>2 MEI 2024</small></figcaption>
+            </figure>
 
-        /* Lightbox (Modal) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .modal-content {
-            display: block;
-            max-width: 90%;
-            max-height: 80%;
-            margin: auto;
-            margin-top: 5%;
-            border-radius: 5px;
-        }
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        @media screen and (max-width: 768px) {
-            .gallery figure {
-                width: 100%;
-            }
-            .image-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .image-container img {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/INSTALASI LISTRIK.jpeg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTEK INSTALASI LISTRIK </figcaption>
+            </figure>
 
-    <header>
-        <img src="FOTO TO/Screenshot 2025-03-12 204855.png" alt="Logo">
-        <div>
-            <h1>TEKNIK OTOMASI</h1>
-            <h1>2023</h1>
+            <figure>
+                <div class="image-container">
+                    <p><strong>TEKNIK OTOMASI MEMBER</p>
+                    <img src="FOTO TO/1.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>KURNIA WIJAYA <small>2315344001</small></figcaption>
+                    <img src="FOTO TO/2.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>SANJAYA<small>2315344002</small></figcaption>
+                    <img src="FOTO TO/3.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>SATYA<small>2315344003</small></figcaption>
+                    <img src="FOTO TO/4.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>SASTRA<small>2315344004</small></figcaption>
+                    <img src="FOTO TO/5.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>OKANTARA<small>2315344005</small></figcaption>
+                    <img src="FOTO TO/6.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>KRISHNA<small>2315344006</small></figcaption>
+                    <img src="FOTO TO/7.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>DIVA<small>2315344007</small></figcaption>
+                    <img src="FOTO TO/8.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>TUT NIK<small>2315344008</small></figcaption>
+                    <img src="FOTO TO/9.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>RIFKY<small>2315344009</small></figcaption>
+                    <img src="FOTO TO/10.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>TRISNA<small>23153440010</small></figcaption>
+                    <img src="FOTO TO/11.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>WIRANATA<small>2315344011</small></figcaption>
+                    <img src="FOTO TO/12.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>RAIHAN<small>2315344013</small></figcaption>
+                    <img src="FOTO TO/13.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>IDA BAGUS ALIT<small>2315344015</small></figcaption>
+                    <img src="FOTO TO/14.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>AGUS MAHARDIKA<small>2315344016</small></figcaption>
+                    <img src="FOTO TO/15.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>IDA BAGUS ADITYA<small>2315344017</small></figcaption>
+                    <img src="FOTO TO/16.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>DIKA<small>2315344020</small></figcaption>
+                    <img src="FOTO TO/17.jpg" alt="none" onclick="openModal(this)">
+                    <figcaption>DODIK<small>2315344021</small></figcaption>
+                </div>
+            </figure>
+            
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/algoritma (1).jpg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/algoritma (2).jpg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/algoritma.jpg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTISI MENGAJAR </figcaption>
+            </figure>
+            
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/bahasaindo (1).jpg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/bahasaindo (2).jpg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>MATKUL BAHASA INDONESIA </figcaption>
+            </figure>
+            
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/MESIN (1).jpeg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/MESIN (2).jpeg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/MESIN (3).jpeg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTEK MESIN LISTRIK </figcaption>
+            </figure>
+
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/PRAKTEK RANGKAIAN LOGIKA (1).jpg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/PRAKTEK RANGKAIAN LOGIKA (2).jpg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/PRAKTEK RANGKAIAN LOGIKA (3).jpg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>PRAKTEK RANGKAIAN LOGIKA </figcaption>
+            </figure>
+            
+            <figure>
+                <div class="image-container">
+                    <img src="FOTO TO/MANGGANG (1).jpeg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/MANGGANG (2).jpeg" alt="none" onclick="openModal(this)">
+                    <img src="FOTO TO/MANGGANG (3).jpeg" alt="none" onclick="openModal(this)">
+                </div>
+                <figcaption>HEALING WI </figcaption>
+            </figure>
+            <div>
+                <a href="https://www.instagram.com/_teknik_otomasi_/ " target="_blank">INSTAGRAM TEKNIK OTOMASI</a>
+                
+                <a href="halaman_tujuan.html">Klik di sini untuk pergi ke halaman tujuan</a>
+            </div>     
         </div>
-    </header>
-    <div class="container">
-        <div class="gallery">
-            <h4>ANAK DIDIK KAJUR </h4>
-            <figure>
-                <div class="image-container">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240416-WA0020.jpg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240416-WA0025.jpg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240416-WA0026.jpg" alt="Pelatihan" onclick="openModal(this)">
-                </div>
-                <figcaption>ALGORITMA C++</figcaption>
-            </figure>
 
-            <figure>
-                <div class="image-container">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240612-WA0038.jpg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240614-WA0043.jpg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\IMG-20240614-WA0074.jpg" alt="Pelatihan" onclick="openModal(this)">
-                </div>
-                <figcaption>PRAKTEK RANGKAIAN LOGIKA</figcaption>
-            </figure>
-
-            <figure>
-                <div class="image-container">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\BAHASA INDONESIA\IMG-20240710-WA0014.jpg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\BAHASA INDONESIA\IMG-20240710-WA0017.jpg" alt="Pelatihan" onclick="openModal(this)">
-                </div>
-                <figcaption>MATA KULIAH BAHASA INDONESIA</figcaption>
-            </figure>
-
-            <figure>
-                <div class="image-container">
-                    <img src="https://github.com/tya16/TEKNIK-OTOMASI/blob/main/FOTO%20TO/IMG-20240416-WA0016.jpg?raw=true" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\2.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\3.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\4.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\5.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\6.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\7.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\8.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\9.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\10.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\11.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\12.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\13.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\14.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\15.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\16.jpg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\INSTALASI\17.jpg" alt="Manggangan" onclick="openModal(this)">
-
-                </div>
-                <figcaption>FINISH PRAKTEK INSTALASI LISTRIK </figcaption>
-            </figure>
-
-            <figure>
-                <div class="image-container">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.17.52.jpeg" alt="Pelatihan" onclick="openModal(this)">
-                </div>
-                <figcaption>PRAKTEK INSTALASI LISTRIK</figcaption>
-            </figure>
-
-            <figure>
-                <div class="image-container">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.20.14.jpeg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.20.14 (2).jpeg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="D:\KULIAH PNB\KULIAH SEMESTER 4\PEMROGRAMAN WEB\WEB PROGRAMMING\web TO\FOTO TO\WhatsApp Image 2025-03-12 at 21.20.14 (1).jpeg" alt="Pelatihan" onclick="openModal(this)">
-                </div>
-                <figcaption>PRAKTEK MESIN LISTRIK</figcaption>
-            </figure>
-
-            <figure>
-                <div class="image-container">
-                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.35.jpeg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.34 (1).jpeg" alt="Pelatihan" onclick="openModal(this)">
-                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.34.jpeg" alt="Pelatihan" onclick="openModal(this)">
-                </div>
-                <figcaption>PELATIHAN HYDROGEN EDUKIT<small>4-6 FEBRUARI 2025</small></figcaption>
-            </figure>
-
-            <figure>
-                <div class="image-container">
-                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.26 (1).jpeg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.30.jpeg" alt="Manggangan" onclick="openModal(this)">
-                    <img src="FOTO TO/WhatsApp Image 2025-03-12 at 20.12.31.jpeg" alt="Manggangan" onclick="openModal(this)">
-                </div>
-                <figcaption>HEALING WI <small>11 MARET 2025</small></figcaption>
-            </figure>
-        </div>
     </div>
 
     <!-- Lightbox (Modal) -->
@@ -217,16 +140,7 @@
         <img class="modal-content" id="imgModal">
     </div>
 
-    <script>
-        function openModal(img) {
-            document.getElementById("myModal").style.display = "block";
-            document.getElementById("imgModal").src = img.src;
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-    </script>
-
+    
 </body>
+<script src="script.js"></script>
 </html>
