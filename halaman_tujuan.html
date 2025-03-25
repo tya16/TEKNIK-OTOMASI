@@ -53,27 +53,41 @@
             Angkatan 2023, yang awalnya berjumlah 21 orang dan sekarang tersisa 17 orang. </p>
             <hr>
         </section>
-
+        <div class="kontak">
         <section id="kontak">
             <h2>Hubungi Kami</h2>
-            <form action="#" method="post">
-                <div>   
-                    <label for="nama">Nama:</label>
-                    <input type="text" id="nama" name="nama" required>
-                    <br><br>
-                </div>
-
+            <form onsubmit="kirimPesan(event)">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" required>
+        
                 <label for="pesan">Pesan:</label>
-                <textarea id="pesan" name="pesan" rows="4" required></textarea>
-                <br><br>
-
-                <button type="submit">Kirim</button>
+                <textarea id="pesan" rows="4" required></textarea>
+        
+                <button type="submit">Kirim ke WhatsApp</button>
             </form>
+        </section>
+        
+        <script>
+        function kirimPesan(event) {
+            event.preventDefault(); 
+        
+            let nama = document.getElementById("nama").value;
+            let pesan = document.getElementById("pesan").value;
+            let nomorWA = "081237494126"; 
+        
+            let url = `https://wa.me/${nomorWA}?text=Halo,%20saya%20${nama}.%20${pesan}`;
+            window.open(url, "_blank");
+        }
+        </script>
+        </div>
             <hr>
         </section>
     </main>
-    
+
+<div class="button-container">
     <a href="index.html"><button>BACK</button></a>
+    <a href="index.html"><button>NEXT</button></a>
+</div>
 
     <footer>
         <p>&copy; sty.nggrdk</p>
