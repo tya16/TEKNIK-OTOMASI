@@ -129,7 +129,7 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    margin-left: 20px; /* Memberi jarak ke kanan */
+    margin-left: 0px; /* Memberi jarak ke kanan */
 }
 
 button:hover {
@@ -137,3 +137,4 @@ button:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     background: linear-gradient(135deg, #484747, #000000); /* Balik gradien saat hover */
 }
+
