@@ -1,0 +1,180 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    padding: 10px 0;
+    font-family: Poppins, sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    color: white;
+    text-align: left;
+}
+
+/* Paragraf */
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+nav {
+    background-color: #000000;
+    padding: 7px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Efek Hover & Aktif */
+nav ul li a:hover {
+    background-color: #302f2f;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a:active,
+nav ul li a.selected {
+    background-color: #555;
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Section */
+section {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 95%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Garis */
+hr {
+    border: 1px solid white;
+    opacity: 0;
+}
+
+/* Efek Halaman */
+body {
+    transition: opacity 0.5s ease-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Tombol */
+button {
+    background: linear-gradient(135deg, #0d0b2d, #1a008f);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #484747, #000000);
+}
+
+/* === Media Query untuk Desktop === */
+@media screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    h1 {
+        font-size: 55px;
+        text-align: left;
+    }
+
+    nav {
+        text-align: right;
+        padding: 15px 50px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 12px 18px;
+    }
+
+    section {
+        width: 80%;
+        margin: 40px auto;
+        padding: 30px;
+    }
+
+    /* Galeri dengan Grid */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 40px auto;
+        width: 85%;
+    }
+
+    figure {
+        width: 100%;
+        text-align: center;
+    }
+
+    figure img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
