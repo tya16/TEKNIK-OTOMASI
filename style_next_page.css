@@ -112,6 +112,60 @@ button:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     background: linear-gradient(135deg, #484747, #000000);
 }
+.button-container {
+    display: flex;
+    justify-content: space-between; /* BACK di kiri, NEXT di kanan */
+    align-items: center;
+    width: 100%;
+    position: relative; /* Posisi tetap di dalam kontainer */
+    margin-top: 50px; /* Tambahkan jarak dari konten atas */
+    padding: 10px 20px;
+}
+
+.button-container a {
+    text-decoration: none;
+}
+
+.button-container button {
+    background: linear-gradient(135deg, #0d0b2d, #1a008f);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #484747, #000000);
+}
+
+/* Supaya tombol ada di bawah */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 20px; /* Jarak dari bawah */
+}
+
+.back {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.next {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-right: 20px;
+}
 
 /* === Media Query untuk Desktop === */
 @media screen and (min-width: 1024px) {
@@ -177,4 +231,37 @@ button:hover {
         font-size: 18px;
         padding: 12px 25px;
     }
+}
+
+.kontak{
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+    width: 100%;
+}
+
+button {
+    width: 80%; /* Lebar tombol lebih besar */
+    padding: 15px; /* Ukuran tombol lebih besar */
+    font-size: 20px; /* Ukuran teks lebih besar */
+    font-weight: bold; /* Teks lebih tebal */
+    border: none;
+    border-radius: 8px;
+    background: green;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: darkgreen;
+    transform: scale(1.05);
+}
+
+    
 }
